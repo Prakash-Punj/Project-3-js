@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 psd</title>
+    <meta name="description" content="3rd psd for project">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+
+*,::before,::after{ 
+            margin: 0; 
+            box-sizing: border-box;
+        }
+        a{
+             text-decoration: none;
+        }
+        img{
+             vertical-align: bottom;
+            }
+        label{
+             display: block;
+            }
+        button{
+             padding: 0; 
+             cursor: pointer;
+            }
+        :disabled{
+             cursor: not-allowed;
+            }
+        ul{
+             list-style: none; 
+             padding: 0;
+            }
+        html{
+             font-size: 15px; 
+             scroll-behavior: smooth; 
+             scroll-padding-top: 80px; 
+             --bclr: #252525;
+            --yclr: #f89e12;
+            }
+        body{
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        .col-6{
+            flex: 1 0 auto;
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+        .container{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+
+        header .container{
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .head_img{
+            width: 100%;
+            height: 38rem;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            display: grid;
+            /* display: flex; */
+        }
+        .slide_1{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: grid;
+        }
+        .slide_1 img{
+            width: 100%;
+            height: 100%;
+        }
+        .head_img h2{
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 1rem 37% 0.5rem;
+            position: absolute;
+            z-index: 2;
+            top: -3%;
+            left: 45%;
+        }
+
+        header .fl{
+            overflow: hidden;
+        }
+        header .pre{
+            width: 30px;
+            aspect-ratio: 1;
+            background-color: rgb(151, 197, 197);
+            border-radius: 55%;
+            padding: 6px 25px 0px 12px;
+            position: absolute;
+            top: 33%;
+            left: -3%;
+            background-color: #000;
+            color: transparent;
+            padding: 0.5rem 2.5rem 0rem 2.5rem;
+            font-size: 2rem;
+            
+        }
+
+        header .pre::before{
+            content: "";
+            display: inline-block;
+            border: 10px solid;
+            border-color: transparent #fff transparent transparent;
+            margin: -14px -6px;
+        }
+        header .next{
+            width: 30px;
+            aspect-ratio: 1;
+            background-color: rgb(151, 197, 197);
+            border-radius: 55%;
+            padding: 6px 25px 0px 12px;
+            position: absolute;
+            top: 34%;
+            right: -3%;
+            background-color: #000;
+            color: transparent;
+            padding: 0.5rem 2.5rem 5rem 2.5rem;
+            font-size: 2rem;
+            overflow: hidden;
+        }
+        header .next::before{
+            content: "";
+            display: inline-block;
+            border: 10px solid;
+            border-color: transparent transparent transparent #fff;
+            margin: -13px -16px;
+        }
+        .heading{
+            width: 70%;
+            border-radius: 5px;
+            background-color: var(--bclr);
+            margin: 0 auto;
+            position: relative;
+            top: -2rem;
+        }
+        .chk{ 
+            display: none; 
+            width: 90px; 
+            height: 35px; 
+            border: 2px solid; 
+            color: #000; 
+            background: none; 
+            border-radius: 10px; 
+ 
+            padding: 5px 10px; 
+            margin: auto;
+            margin-top: 6px;
+            cursor: pointer;
+        }
+        .chk span{ 
+            display: block; 
+            height: 2px; 
+            background: #000; 
+            margin: 4px 0; 
+        } 
+       /* .heading .chk:checked + .collapse{ display: block; } */
+        .chk.active span:nth-child(1){
+            transform: translateY(6px) rotate(-14deg);
+        }
+        .chk.active span:nth-child(2){
+            opacity: 0;
+        }
+        .chk.active span:nth-child(3){
+            transform: translateY(-6px) rotate(14deg);
+        }
+
+        .heading ul{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .heading li{
+            margin: 1.5rem 0rem 1.5rem 0rem;
+        }
+        .heading a{
+            font-size: 0.95rem;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        .wrap-2{
+            padding: 2rem;
+            text-align: center;
+        }
+        .wrap-2 h2{
+            font-size: 3rem;
+        }
+        .wrap-2 p{
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        /* .wrap-2-button{
+            background-color: var(--bclr);
+
+        } */
+        .wrap-2-button a{
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.6rem 2.2rem;
+            background: var(--bclr);
+        }
+
+
+        .wrap-3 .container{
+            display: flex;
+            margin: 2rem 0 2rem 0;
+        }
+        .img_back{
+            width: 10%;
+            aspect-ratio: 1.2;
+            background: #ececec;
+            /* position: relative; */
+            flex: 1 1 auto;
+            flex-basis: 50%;
+            max-width: 50%;
+            margin: 2rem 2rem 2rem 0;
+        }
+        .wrap-3 img{
+            width: 100%;
+            aspect-ratio: 1.2;
+            margin: 2.1rem 0 2.1rem 3rem;
+        }
+        .side{
+            flex: 1 0 auto;
+            flex-basis: 50%;
+            max-width: 50%;
+            text-align: center;
+            margin: 1rem;
+        }
+        .line{
+            width: 1px;
+            height: 9rem;
+            background: var(--bclr);
+            margin: 3rem 1rem 1rem 36%;
+        }
+        .side h2{
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding: 1rem 10rem 1rem 1rem;
+        }
+        .side p{
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0 9rem 2rem 2rem;
+        }
+        .wrap-3_a{
+            padding: 0 10rem 0 1rem;
+        }
+        .side button{
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.6rem 2.2rem;
+            background: var(--bclr);
+        }
+
+        .show{
+            display: none;
+            transition: 1s;
+        }
+        .show.block{
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0 9rem 2rem 2rem;
+        }
+
+        .fruit_box{
+            display: flex;
+            flex-flow: wrap;
+            text-align: center;
+        }
+        .wrap-4 h2{
+            font-size: 1.9rem;
+            font-weight: 600;
+            padding: 3rem;
+            letter-spacing: 0.05rem;
+            text-align: center;
+        }
+        .col-3{
+            flex: 1 1 auto;
+            flex-basis: 33.3%;
+            max-width: 33.3%;
+        }
+        .box img{
+            width: 90%;
+            aspect-ratio: 1;
+            /* height: 50%; */
+            /* margin: 1rem; */
+            padding: 1rem 0 1rem 0;
+        }
+
+        .wrap-5{
+            text-align: center;
+            margin: 4rem 1rem 4rem 1rem;
+            padding: 1rem;
+        }
+        .customer h3{
+            font-size: 2.5rem;
+            font-weight: 400;
+            padding: 3rem;
+        }
+
+        .img_box{
+            margin: 0 auto;
+            width: 70%;
+            height: 21rem;
+            padding-top: 1rem;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .img_slide{
+            display: flex;
+            height: 100%;
+        }
+        .review{
+            min-width: 100%;
+        }
+        
+        .slide{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+        }
+
+        .img_slide .fl{
+            text-align: center;
+        }
+        .customer .pre{
+            border-radius: 50%;
+            position: absolute;
+            top: 25%;
+            right: 70%;
+            background-color: var(--bclr);
+            color: var(--bclr);
+            padding: 0.6rem 0.7rem 0.6rem 0.8rem;
+            font-size: 1.2rem;
+        }
+        .customer .pre::before{
+            content: "";
+            display: inline-block;
+            border: 6px solid;
+            border-color: transparent #fff transparent transparent;
+            margin: -1px -4px;
+        }
+        .customer .next{
+            border-radius: 50%;
+            position: absolute;
+            top: 25%;
+            left: 70%;
+            background-color: var(--bclr);
+            color: var(--bclr);
+            padding: 7px 0 10px 23px;
+            font-size: 1.2rem;
+        }
+        .customer .next::before{
+            content: "";
+            display: inline-block;
+            border: 6px solid;
+            border-color: transparent transparent transparent #fff;
+            margin: -1px -3px;
+        }
+        .wrap-5 figcaption{
+            font-weight: 700;
+        }
+        .wrap-5 p{
+            width: 60%;
+            margin: 0 0 1rem 20%;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* .wrap-6{
+            padding: 0.4rem 1.2rem;
+        } */
+        .wrap-6 .container{
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .content{
+            display: flex;
+        }
+        .wrap-6 form{
+            padding: 3rem 0 1rem 12%;
+        }
+        label{
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            font-weight: 400;
+            color: var(--hclr);
+            line-height: 2;
+            display: block;
+            padding: 1rem;
+        }
+        input{
+            width: 100%;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            box-shadow: 0 0 2px #a3a3a3;
+            border: none;
+        }
+        .content input:focus{
+            outline: 0;
+            border-color: var(--asclr);
+            border-radius: 8px;
+        }
+        textarea{
+            width: 100%;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            box-shadow: 0 0 5px #a3a3a3;
+            border: none;
+        }
+        .map{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 63%; 
+            padding-left: 1rem;
+        }
+        .map iframe{
+            position: absolute;
+            top: 2rem;
+            left: 5%;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 60%;
+            border: none;
+            margin: 0.5rem;
+            
+        }
+        .btn_div{
+            margin: 2rem 0 0 0;
+            float: left;
+        }
+        .btn{
+            padding: 0.6rem 2.3rem 0.6rem 2.3rem;
+            color: #fff;
+            background: var(--yclr);
+            border: none;
+            /* margin: 1rem; */
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .wrap-7 .container{
+            background-color: var(--bclr);
+            color: #fff;
+        }
+        .wrap-7 h2{
+            font-size: 1.7rem;
+            padding: 7% 41%;
+        }
+        .detail{
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        .detail a{
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 300;
+            padding: 1rem;
+
+        }
+        .form{
+            display: flex;
+        }
+        .detail form{
+            display: flex;
+            padding: 3rem 7% 1rem 7%;
+        }
+        .social{
+            padding: 3rem 0 1rem;
+        }
+        .social a{
+            padding: 0rem 1rem;
+            font-size: 1rem;
+        }
+        .sub_btn{
+            color: #fff;
+            background: var(--yclr);
+            border: none;
+            padding: 0 4rem 0 4rem;
+            font-size: 0.6rem;
+            font-weight: 300;
+            letter-spacing: 0.04rem;
+        }
+        .col-9{
+            flex: 1 1 auto;
+            flex-basis: 75%;
+            max-width: 75%;
+        }
+
+
+        footer p{
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.04rem;
+            padding: 0.8rem ;
+            text-align: center;
+            
+        }
+
+
+        @media screen and (max-width:1220px) {
+            html{
+                font-size: 15px;
+            }
+            .col-1-6{
+                flex: 1 1 auto;
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width:980px) {
+            html{
+                font-size: 13px;
+            }
+            .head_img{
+                height: 35rem;
+            }
+            header .pre{
+                top: 27%;
+            }
+            header .next{
+                top: 28%;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            html{
+                font-size: 12px;
+            }
+            .head_img{
+                height: 28rem;
+            }
+            .heading{
+                /* width: 70%; */
+                background-color: transparent;
+            }
+            .heading a{
+                padding: 0.5rem;
+            }
+
+            header .pre{
+                top: 36%;
+                left: -4%;
+                padding: 0 2.5rem 0 2rem;
+            }
+            header .pre::before{
+                margin: -18px -1px;
+            }
+            header .next{
+                top: 36%;
+                right: -4%;
+                padding: 0 2.5rem 5rem 2rem;
+            }
+            header .next::before{
+                margin: -16px -13px;
+            }
+
+            .collapse{
+                display: none;
+            }
+            .chk{ display: block;}
+            .collapse{ 
+                position: absolute; 
+                left: 25%; 
+                right: 25%; 
+                top: -14.5rem;
+                border-radius: 5px;
+                padding: 0 1rem; 
+                background: var(--yclr);
+            }
+            .collapse a{ line-height: 2.2rem;}
+
+            nav{ 
+                    width: 100%; 
+                 text-align: center;
+                margin: 0 1rem;
+            }
+            .heading ul{
+                flex-flow: column;
+            }
+            .heading li{
+                margin: 0;
+            }
+
+            .col-6{
+                flex: 1 1 auto;
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+            .col-m-12{
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .wrap-3 .container{
+                flex-flow: wrap;
+            }
+            .img_back{
+                margin: 0 8rem 0 8rem;
+            }
+            .line{
+                margin: 3rem 1rem 1rem 43%;
+            }
+            .side h2{
+                padding: 1rem 7rem 1rem 1rem;
+            }
+            .side p{
+                padding: 0 6rem 2rem 6rem;
+            }
+            .content{
+            flex-flow: wrap;
+            }
+            .form{
+                flex-flow: column;
+            }
+        }
+
+        @media screen and (max-width:460px) {
+            html{
+                font-size: 11px;
+            }
+            .head_img{
+                height: 22rem;
+            }
+
+            header .pre{
+                /* top: 14%; */
+                left: -6%;
+                padding: 0 1.5rem 0 2.5rem;
+                font-size: 1rem;
+            }
+            header .pre::before{
+                border: 7px solid;
+                margin: -17px -6px;
+                border-color: transparent #fff transparent transparent;
+            }
+            header .next{
+                /* top: 14%; */
+                right: -6%;
+                padding: 0 1.5rem 4rem 2.5rem;
+            }
+            header .next::before{
+                border: 7px solid;
+                margin: -6px -19px;
+                border-color: transparent transparent transparent #fff;
+            }
+
+            .wrap-2 img{
+                width: 90%;
+                height: auto;
+            }
+
+            .wrap-3 img{
+                width: 95%;
+            }
+            
+            .col-m-12{
+                flex: 1 1 auto;
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+
+        </style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+                <div class="head_img">
+                    <div class="slide_1">
+                        <img src="3_img-1.png" alt="img1" >
+                        <h2>NINOM</h2>
+                    </div>
+                    <div class="slide_1">
+                        <img src="k14.jpg" alt="k14" >
+                        <h2>NINOM 2</h2>
+                    </div>
+                    <div class="slide_1">
+                        <img src="k11.jpg" alt="k11" >
+                        <h2>NINOM 3</h2>
+                    </div>
+                    <div class="slide_1">
+                        <img src="k15.jpg" alt="k12" >
+                        <h2>NINOM 4</h2>
+                    </div>
+                </div>
+
+                <div class="fl">
+                    <a href="#" onclick="prev()" class="pre">&larr;</a>
+                    <a href="#" onclick="next()" class="next">&rarr;</a>
+                </div>
+
+                <div class="heading">
+                    <div class="chk">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="collapse">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Our_Fruit</a></li>
+                                <li><a href="#">Testimonial</a></li>
+                                <li><a href="#">Contact_Us</a></li>
+                                <li><a href="#">Login</a></li>
+                                <li><a href="#">search</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    </header>
+
+    <div class="wrap-2">
+        <div class="container">
+            <h2>FRUIT SHOP</h2>
+            <p>
+                There are many variations of passages of
+                 Lorem Ipsum available
+            </p>
+            <img src="3_img-2.png" 
+                alt="apple" 
+                width="370" 
+                height="370" 
+                loading="lazy"
+                >
+            <div class="wrap-2-button">
+                <a href="#" target="_blank">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-3">
+        <div class="container">
+            <div class="img_back col-m-12">
+                <img src="3_img-3.png" 
+                alt="orange"
+                loading="lazy"
+            >
+            </div>
+            <div class="side col-m-12">
+                <div class="line"></div>
+                <h2>About Our Fruit Shop</h2>
+            <p>
+                There are many variations of passages of Lorem
+                 Ipsum available but the majority have suffered alteration
+                 in some form, by injected humour
+                 <span class="show">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Tempora error eos sapiente molestias, cumque ipsam!
+                 </span>
+            </p>
+            <div class="wrap-3_a">
+                <button class="btn">Read More</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-4">
+        <div class="container">
+            <h2>Fresh Fruit</h2>
+            <div class="fruit_box">
+                
+                <div class= "box col-3 col-6 col-m-12">
+                    <img src="3_img-4.png" alt="img-4-1">
+                </div>
+                <div class="box col-3 col-6 col-m-12">
+                    <img src="3_img-4-2.png" alt="img-4-1">
+                </div>
+                <div class="box col-3 col-6 col-m-12">
+                    <img src="3_img-4-3.png" alt="img-4-1">
+                </div>
+                <div class="box col-3 col-6 col-m-12">
+                    <img src="3_img-4-4.png" alt="img-4-1">
+                </div>
+                <div class="box col-3 col-6 col-m-12">
+                    <img src="3_img-4-5.png" alt="img-4-1">
+                </div>
+                <div class="box col-3 col-6 col-m-12">
+                    <img src="3_img-4-6.png" alt="img-4-1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-5">
+        <div class="container">
+            <div class="customer">
+                <h3>What Syas Cutomer </h3>
+
+                <div class="img_box">
+                    <div class="img_slide">
+                        <div class="review">
+                            <figure>
+                                <img src="3_img-5.png" alt="img-5"
+                                loading="lazy" class="slide"
+                                >
+                                <figcaption>Jone Mark</figcaption>
+                                <p>
+                                    <q>Lorem ipsum dolor sit amet </q> <br>
+                                    consectetur adipisicing elit. Ipsam laboriosam 
+                                    dignissimos quas non! Veritatis, consequatur 
+                                    doloribus? Iusto, sequi vel quod enim deserunt 
+                                    id provident officia, dolor unde, libero non 
+                                    deleniti.
+                                </p>
+                            </figure>
+                        </div>
+        
+                        <div class="review">
+                            <figure>
+                                <img src="/self/k10.jpg" alt="img2"
+                                loading="lazy" class="slide"
+                            >
+                            <figcaption>k10</figcaption>
+                            <p>
+                                <q>Lorem ipsum dolor sit amet </q> <br>
+                                consectetur adipisicing elit. Ipsam laboriosam 
+                                dignissimos quas non! Veritatis, consequatur 
+                                doloribus? Iusto, sequi vel quod enim deserunt 
+                                id provident officia, dolor unde, libero non 
+                                deleniti.
+                            </p>
+                            </figure>
+                        </div>
+        
+                        <div class="review">
+                            <figure>
+                                <img src="/self/k6.jpg" alt="img3"
+                                loading="lazy" class="slide"
+                            >
+                            <figcaption>k6</figcaption>
+                            <p>
+                                <q>Lorem ipsum dolor sit amet </q> <br>
+                                consectetur adipisicing elit. Ipsam laboriosam 
+                                dignissimos quas non! Veritatis, consequatur 
+                                doloribus? Iusto, sequi vel quod enim deserunt 
+                                id provident officia, dolor unde, libero non 
+                                deleniti.
+                            </p>
+                            </figure>
+                        </div>
+        
+                        <div class="review">
+                            <figure>
+                                <img src="/self/k7.jpg" alt="img4"
+                                loading="lazy" class="slide"
+                            >
+                            <figcaption>k7</figcaption>
+                            <p>
+                                <q>Lorem ipsum dolor sit amet </q> <br>
+                                consectetur adipisicing elit. Ipsam laboriosam 
+                                dignissimos quas non! Veritatis, consequatur 
+                                doloribus? Iusto, sequi vel quod enim deserunt 
+                                id provident officia, dolor unde, libero non 
+                                deleniti.
+                            </p>
+                            </figure>
+                        </div>
+    
+                        <div class="fl">
+                            <button  class="pre" onclick="goPrev()">&larr;</button>
+                            <button  class="next" onclick="goNext()">&rarr;</button>
+                        </div>
+    
+                    </div>
+                </div>
+                    
+                    
+                
+                
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-6">
+        <div class="container">
+            <div class="content">
+                <form action="#" class="col-6 col-m-12">
+                    <div>
+                        <label for="name"></label>
+                        <input type="text" id="name" required autocomplete="off" placeholder="FULL NAME">
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input type="email" id="email" required autocomplete="off" placeholder="EMAIL">
+                    </div>
+                    <div>
+                        <label for="phone"></label>
+                        <input type="tel" id="phone" required autocomplete="off" placeholder="PHONE NUMBER">
+                    </div>
+                    
+                    <div>
+                        <label for="detail"></label>
+                        <textarea name="query detail" id="detail" cols="30" rows="4" placeholder="MESSAGE"></textarea>
+                    </div>
+                    <div class="btn_div">
+                        <button class="btn" type="submit">Send</button>
+                    </div>
+    
+                </form>
+
+                <div class="map col-1-6 col-m-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14014.370552220726!2d77.2987918!3d28.5819928!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45e3eccb8a7%3A0xd5eb60e62b19e6ba!2sSector%2015%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1713444321299!5m2!1sen!2sin" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="wrap-7">
+        <div class="container">
+            <h2>NINOM</h2>
+            <div class="detail">
+                <a href="#" class="col-4">Passagas of Lorem Ipsum available</a>
+                <a href="#" class="col-4">Call:+012334567890</a>
+                <a href="#" class="col-4">demo@gmail.com</a>
+                <div class=" form col-m-12">
+                    <form action="/" class="col-9 col-m-12">
+                        <input type="email"
+                         required
+                         placeholder="Enter your email"
+                         >
+                         <button class="sub_btn">SUBSCRIBE</button>
+                    </form>
+                    <div class="social col-3 col-m-12">
+                        <a href="https://www.facebook.com/" target="_blank"><span class="fa-brands fa-facebook-f"></span></a>
+                        <a href="https://www.instagram.com/" target="_blank"><span class="fa-brands fa-square-instagram"></span></a>
+                        <a href="https://x.com/?lang=en" target="_blank"><span class="fa-brands fa-twitter"></span></a>
+                        <a href="https://web.whatsapp.com/" target="_blank"><span class="fa-brands fa-whatsapp"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;2019 All Rights reserved. Design by Free Html Templates
+        </p>
+    </footer>
+
+
+
+
+    <script>
+
+        const menu = document.querySelector('.chk');
+        const nav = document.querySelector('nav');
+        const coll = document.querySelector('.collapse');
+        const li = document.querySelectorAll('li');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+
+            if(menu.classList.contains('active')){
+                coll.style.display = 'block';
+            }else{
+                coll.style.display = 'none';
+            }
+        });
+
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                li.style.display = 'none';
+                menu.classList.remove('active');
+            });
+        });
+
+       
+        // if(screen.maxWidth > 768){
+        //     menu.classList.contains ('active');
+        // }
+
+
+        // ---- Read More Button ------
+
+
+        const show = document.querySelector('.show');
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('click', () => {
+            show.classList.toggle('block');
+
+            if(show.classList.contains('block')){
+                show.style.transition = '.5s';
+                btn.textContent = 'Read Less';
+            }else{
+                show.style.transition = '.5s';
+                btn.textContent = 'Read More';
+            }
+        })
+
+        // --- image slide ----
+
+        const slide = document.querySelectorAll('.review');
+        var counter = 0;
+        const total = slide.length;
+
+        slide.forEach((slides, index) => {
+            slides.style.left = `${index * 100}%`
+            slides.style.transition = '.5s';
+        })
+
+        const goPrev = () => {
+            counter--;
+            if(counter < 0){
+                counter = total - 1;
+            }
+            slideImage()
+        }
+
+        const goNext = () => {
+            counter++;
+            slideImage();
+            if(counter >= total - 1){
+                counter = -1;
+                slide.forEach((slides) => {
+                    slides.style.transition = 'none';
+                });
+            }
+        }
+
+        const slideImage = () => {
+            slide.forEach((slides) => {
+                slides.style.transform = `translateX(-${counter * 100}%)`;
+            })
+        }
+
+        // ----- head image slider ------
+
+
+        const slider = document.querySelectorAll('.slide_1');
+        var counter = 0;
+        const totalS = slider.length;
+
+        slider.forEach((slides, index) => {
+            slides.style.left = `${index * 100}%`
+            slides.style.transition = '.5s';
+        })
+
+        const prev = () => {
+            counter--;
+            if(counter < 0){
+                counter = totalS - 1;
+            }
+            slideImages()
+        }
+
+        const next = () => {
+            counter++;
+            slideImages();
+            if(counter >= totalS - 1){
+                counter = -1;
+                slider.forEach((slides) => {
+                    slides.style.transition = 'none';
+                });
+            }
+        }
+
+        const slideImages = () => {
+            slider.forEach((slides) => {
+                slides.style.transform = `translateX(-${counter * 100}%)`;
+            })
+        }
+
+    </script>
+
+</body>
+</html>
